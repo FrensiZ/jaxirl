@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: jaxirl
+Version: 0.1.0
+Summary: Implementation of IRL algorithms in JAX
+Author: Silvia Sapora
+Author-email: silvia.sapora@gmail.com
+License-File: LICENSE

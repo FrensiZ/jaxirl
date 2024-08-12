@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+jaxirl.egg-info/PKG-INFO
+jaxirl.egg-info/SOURCES.txt
+jaxirl.egg-info/dependency_links.txt
+jaxirl.egg-info/top_level.txt
