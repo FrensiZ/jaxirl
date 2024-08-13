@@ -8,14 +8,18 @@ import flax
 
 
 def get_state_from_obs(num_columns, num_rows, num_rewards, obs):
+    # Reshape the observation to match the grid dimensions
     obs = obs.reshape(num_columns, num_rows, -1)
-    # agent_pos
+    # Extract agents position and rewards
     state = jnp.asarray(jnp.nonzero(obs[:, :, 1], size=(1), fill_value=num_columns))
+    
     for num_reward in range(2, num_rewards + 2):
         reward = jnp.asarray(
             jnp.nonzero(obs[:, :, num_reward], size=(1), fill_value=num_columns)
         )
         state = jnp.concatenate([state, reward], axis=0)
+    
+    # The state is then represented as a concatenated array of positions (agent and rewards) and returned as the environment's state.
     return state.reshape(-1)
 
 
